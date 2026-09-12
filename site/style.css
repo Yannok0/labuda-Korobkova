@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*шрифты*/
+@font-face {
+    font-family: 'Miama Nueva';
+    src: url(fonts/miamanueva.otf) format(opentype);
+}
+@font-face {
+    font-family: 'Metrika';
+    src: url(fonts/Metrika.otf) format(opentype);
+}
+@font-face {
+    font-family: 'Italiana';
+    src: url(fonts/Italiana-Regular.ttf) format(truetype);
+}
+
+/*hero*/
+.hero{
+    background-image: url(img/фон.png);
+    margin: 0px;
+    padding: 0px;
+    height: 750px;
+}
+.img.vector{
+    height: 20px;
+    color: none;
+}
+.logo{
+    width: 680px;
+    height: 130px;
+}
+.text-ml{
+    font-family: 'Miama Nueva';
+    font-size: 54px;
+    color: #f6f6f6;
+    text-align: center;
+}
+.text-sl{
+    font-family: 'Miama Nueva';
+    font-size: 30px;
+    color: #f6f6f6;
+    text-align: center;
+}
