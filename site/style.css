@@ -1,50 +1,612 @@
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #160d0f;
+    color: #f1e4e3;
 }
 
 
-/*шрифты*/
+/* щрифты */
+
 @font-face {
     font-family: 'Miama Nueva';
-    src: url(fonts/miamanueva.otf) format(opentype);
+    src: url(fonts/miamanueva.otf) format('opentype');
 }
+
 @font-face {
     font-family: 'Metrika';
-    src: url(fonts/Metrika.otf) format(opentype);
-}
-@font-face {
-    font-family: 'Italiana';
-    src: url(fonts/Italiana-Regular.ttf) format(truetype);
+    src: url(fonts/Metrika.otf) format('opentype');
 }
 
-/*hero*/
-.hero{
-    background-image: url(img/фон.png);
-    margin: 0px;
-    padding: 0px;
-    height: 750px;
+@font-face {
+    font-family: 'Italiana';
+    src: url(fonts/Italiana-Regular.ttf) format('truetype');
 }
-.img.vector{
-    height: 20px;
-    color: none;
+
+
+/* главный */
+
+.main {
+    position: relative;
+    height: 510px;
+    overflow: hidden;
+    background-image: url(img/main.png);
+    background-size: cover;
+    background-position: center;
 }
-.logo{
-    width: 680px;
-    height: 130px;
+
+.menu {
+    position: absolute;
+    top: 27px;
+    left: 25px;
+    width: 38px;
+    height: 30px;
+    padding: 0;
+    border: none;
+    background: none;
+    z-index: 2;
+    cursor: pointer;
 }
-.text-ml{
-    font-family: 'Miama Nueva';
-    font-size: 54px;
-    color: #f6f6f6;
+
+.vector {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.hero {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
 }
-.text-sl{
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.logo .line {
+    width: 125px;
+    height: auto;
+}
+
+.text-ml {
+    margin: 0;
     font-family: 'Miama Nueva';
+    font-size: 52px;
+    font-weight: normal;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.text-sl {
+    margin: -3px 0 0;
+    font-family: 'Miama Nueva';
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.text-hero {
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    width: 500px;
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: 'Miama Nueva';
+    font-size: 45px;
+    font-weight: normal;
+}
+
+.main > .button {
+    position: absolute;
+    top: 325px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.button-hero {
+    width: 220px;
+    padding: 13px 25px 10px;
+    border: 1px solid #f1dedd;
+    border-radius: 35px;
+    text-align: center;
+    font-family: 'Miama Nueva';
+    font-size: 24px;
+    line-height: 1;
+}
+
+
+/* about */
+
+.about {
+    position: relative;
+    min-height: 285px;
+    padding: 25px 15px;
+}
+
+.about-text {
+    position: absolute;
+    top: 25px;
+    left: 450px;
+    width: 320px;
+}
+
+.about-head {
+    
+    font-family: 'Miama Nueva';
+    font-size: 34px;
+    font-weight: normal;
+    line-height: 0.95;
+}
+
+.p {
+    width: 320px;
+    margin: 25px 0 0;
+    font-family: 'Metrika';
+    font-size: 17px;
+    line-height: 1.12;
+}
+
+.about-image {
+    position: absolute;
+    top: 25px;
+    left: 15px;
+    width: 369px;
+    height: 305px;
+    object-fit: cover;
+}
+
+.about-image-2 {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 336px;
+    height: 342px;
+    object-fit: cover;
+}
+
+.details {
+    display: flex;
+    gap: 27px;
+    margin-top: 20px;
+}
+
+.details-text {
+    font-family: 'Metrika';
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+
+/* catalog */
+
+.catalog {
+    min-height: 730px;
+    padding: 55px 52px 60px;
+}
+
+.catalog-head {
+    margin: 0 0 40px;
+    text-align: center;
+}
+
+.span {
+    font-family: 'Miama Nueva';
+    font-size: 48px;
+    font-weight: normal;
+    line-height: 1.5;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 5px;
+}
+
+.cart {
+    display: inline-flex;
+    vertical-align: top;
+    flex-direction: column;
+    width: calc(25% - 17px);
+    min-height: 500px;
+    margin-right: 18px;
+    border: 1px solid #c8aaa7;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.cart:last-child {
+    margin-right: 0;
+}
+
+.img-cart {
+    display: block;
+    width: 100%;
+    height: 305px;
+    object-fit: cover;
+}
+
+.head-cart {
+    margin: 10px 7px 0;
+    text-align: center;
+    font-family: 'Italiana';
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.line-for-cart {
+    display: block;
+    width: 65px;
+    height: 1px;
+    margin: 8px auto 0;
+}
+
+.cart-description {
+    margin: 9px 7px 0;
+    color: #a99594;
+    text-align: center;
+    font-family: 'Italiana';
+    font-size: 17px;
+    line-height: 1;
+}
+
+.price-cart {
+    margin: 10px 0 10px;
+    text-align: center;
+    font-family: 'Italiana';
+    font-size: 19px;
+    line-height: 1;
+}
+
+.cart .button {
+    margin-top: auto;
+    margin-bottom: 8px;
+}
+
+.button-cart {
+    min-width: 145px;
+    padding: 8px 15px 6px;
+    border: 1px solid #c8aaa7;
+    border-radius: 25px;
+    text-align: center;
+    font-family: 'Italiana';
+    font-size: 15px;
+    line-height: 1;
+}
+
+
+/* advantages */
+
+.advantages {
+    position: relative;
+    min-height: 370px;
+    padding: 45px 62px;
+    overflow: hidden;
+    background-image: url(img/backadvant.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.background-advantages {
+    display: none;
+}
+
+.advantages-header {
+    position: relative;
+    z-index: 1;
+    margin: 0 0 42px;
+    font-family: 'Italiana';
     font-size: 30px;
-    color: #f6f6f6;
-    text-align: center;
+    font-weight: normal;
+}
+
+.advant-text {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    vertical-align: top;
+    width: 29%;
+    padding-right: 25px;
+}
+
+.advant-text:not(:last-child) {
+    border-right: 1px solid #c8aaa7;
+}
+
+.advant-text:nth-of-type(2) {
+    padding-left: 28px;
+}
+
+.advant-text:nth-of-type(3) {
+    padding-left: 28px;
+}
+
+.advant-num {
+    margin: 0 0 12px;
+    font-family: 'Italiana';
+    font-size: 19px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.advant-head {
+    margin: 0 0 10px;
+    font-family: 'Italiana';
+    font-size: 23px;
+    font-weight: normal;
+    line-height: 1;
+}
+
+.advent-p {
+    margin: 0;
+    font-family: 'Italiana';
+    font-size: 17px;
+    line-height: 1.05;
+}
+
+
+/* footer */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    min-height: 210px;
+    padding: 35px 45px 25px;
+    border-top: 1px solid #c8aaa7;
+    background: #160d0f;
+}
+
+.footer-logo {
+    width: 25%;
+}
+
+.footer-h {
+    margin: 0;
+    font-family: 'Miama Nueva';
+    font-size: 38px;
+    font-weight: normal;
+    line-height: 0.8;
+}
+
+.footer-p {
+    margin: 5px 0 0;
+    font-family: 'Miama Nueva';
+    font-size: 17px;
+    line-height: 1;
+}
+
+.footer-block {
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+}
+
+.footer-block h4 {
+    margin: 0 0 10px;
+    font-family: 'Italiana';
+    font-size: 22px;
+    font-weight: normal;
+}
+
+.footer-block a {
+    margin-bottom: 4px;
+    color: #a99594;
+    text-decoration: none;
+    font-family: 'Italiana';
+    font-size: 17px;
+}
+
+
+/* адаптивка мало ли */
+
+@media (max-width: 800px) {
+
+    .main {
+        height: 600px;
+    }
+
+    .logo .line {
+        width: 80px;
+    }
+
+    .text-ml {
+        font-size: 40px;
+    }
+
+    .text-sl {
+        font-size: 15px;
+    }
+
+    .text-hero {
+        top: 250px;
+        width: 90%;
+        font-size: 38px;
+    }
+
+    .main > .button {
+        top: 350px;
+    }
+
+    .about {
+        min-height: 650px;
+    }
+
+    .about-image {
+        left: 25px;
+        width: 45%;
+        height: 180px;
+    }
+
+    .about-image-2 {
+        right: 25px;
+        width: 45%;
+        height: 180px;
+    }
+
+    .about-text {
+        position: absolute;
+        top: 230px;
+        left: 25px;
+        width: calc(100% - 50px);
+    }
+
+    .p {
+        width: 100%;
+    }
+
+    .details {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .catalog {
+        padding: 45px 25px;
+    }
+
+    .cart {
+        width: calc(50% - 10px);
+        margin-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    .cart:nth-of-type(2n) {
+        margin-right: 0;
+    }
+
+    .advantages {
+        padding: 40px 25px;
+    }
+
+    .advant-text {
+        display: block;
+        width: 100%;
+        padding: 15px 0 !important;
+        border-right: none !important;
+        border-bottom: 1px solid #c8aaa7;
+    }
+
+    .footer {
+        flex-wrap: wrap;
+        gap: 25px;
+        padding: 30px 25px;
+    }
+
+    .footer-logo {
+        width: 100%;
+    }
+
+    .footer-block {
+        width: 30%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .main {
+        height: 520px;
+    }
+
+    .menu {
+        top: 20px;
+        left: 20px;
+        width: 30px;
+    }
+
+    .logo {
+        gap: 4px;
+    }
+
+    .logo .line {
+        width: 50px;
+    }
+
+    .text-ml {
+        font-size: 32px;
+    }
+
+    .text-sl {
+        font-size: 12px;
+    }
+
+    .text-hero {
+        top: 230px;
+        font-size: 31px;
+    }
+
+    .main > .button {
+        top: 330px;
+    }
+
+    .about {
+        min-height: 650px;
+        padding: 20px;
+    }
+
+    .about-image,
+    .about-image-2 {
+        position: relative;
+        top: auto;
+        left: auto;
+        right: auto;
+        width: 48%;
+        height: 140px;
+        margin-bottom: 15px;
+    }
+
+    .about-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        width: 100%;
+    }
+
+    .about-head {
+        margin: 10px 0 20px;
+    }
+
+    .p {
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .details {
+        position: relative;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .catalog {
+        padding: 45px 20px;
+    }
+
+    .span {
+        font-size: 40px;
+    }
+
+    .cart {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .footer-block {
+        width: 45%;
+    }
 }
