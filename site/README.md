@@ -1,1 +1,1 @@
-https://Yannok0/github.io/site/
+https://Yannok0.github.io/site/
